@@ -14,12 +14,13 @@ class StatusRoboController extends Controller
         $this->service = $service;
     }
 
-    public function getStatus(Request $request){
+    public function getStatus(Request $request, $id){
 
-        $response = $this->service->getStatus();
-        if(!$response['status']){
-            return response()->json($response, 200);
+        $response = $this->service->getStatus($id);
+        if($response['status']){
+            return response()->json($response['data'], 200);
+        } else {
+            return response()->json($response['data'], 400);
         }
-        return response()->json($response, 400);
     }
 }

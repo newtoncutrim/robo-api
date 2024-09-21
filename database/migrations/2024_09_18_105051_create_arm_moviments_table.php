@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('robos', function (Blueprint $table) {
+        Schema::create('arm_moviments', function (Blueprint $table) {
             $table->id();
-            $table->integer('left_elbow');
-            $table->integer('right_elbow');
-            $table->integer('left_wrist');
-            $table->integer('right_wrist');
-            $table->integer('rotation_head');
-            $table->integer('slope_head');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('robos');
+        Schema::dropIfExists('arm_moviments');
     }
 };

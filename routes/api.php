@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\AddMovementsRobot;
+use App\Http\Controllers\Api\CommandsForRoboController;
 use App\Http\Controllers\Api\StatusRoboController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,8 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/get-status/robot', [StatusRoboController::class, 'getStatus']);
-
-Route::post('/move-elbow/{side}/{slope}', [StatusRoboController::class, 'moveElbow']);
-Route::post('/move-wrist/{side}/{rotation}', [StatusRoboController::class, 'moveWrist']);
-Route::post('/move-head/{side}/{rotation}', [StatusRoboController::class, 'moveHead']);
+Route::get('/get-status/robot/{id}', [StatusRoboController::class, 'getStatus']);
+Route::post('/move-robot/{id}', [CommandsForRoboController::class, 'moveRobot']);
+Route::post('add/movements/wrist', [AddMovementsRobot::class, 'addMovementsWrist']);
+Route::post('add/movements/arm', [AddMovementsRobot::class, 'addMovementsArm']);
+Route::post('add/movements/head-tilt', [AddMovementsRobot::class, 'addMovementsHeadTilt']);
+Route::post('add/movements/head-rotation', [AddMovementsRobot::class, 'addMovementsHeadRotation']);
