@@ -96,7 +96,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            fetchRobotStatus(); // Chama a função ao carregar a página
+            fetchRobotStatus();
         });
 
         function updateWristStatus(side) {
@@ -157,8 +157,6 @@
             if (!document.getElementById('head_tilt').disabled) {
                 payload.head_tilt_id = parseInt(headTilt);
             }
-
-            console.log(payload);
 
             try {
                 // Faz a requisição para a API
