@@ -19,7 +19,7 @@ class AddMovementsRobot extends Controller
     {
         $data = $this->addCommandsForRobotService->addWristMoviment($request->all());
         if ($data['status']) {
-            return response()->json($data['message'], 200);
+            return response()->json([$data['message'], $data['data']], 201);
         } else {
             return response()->json($data['message'], 400);
         }
@@ -29,7 +29,7 @@ class AddMovementsRobot extends Controller
     {
         $data = $this->addCommandsForRobotService->addArmMoviment($request->all());
         if ($data['status']) {
-            return response()->json($data['message'], 200);
+            return response()->json([$data['message'], $data['data']], 201);
         } else {
             return response()->json($data['message'], 400);
         }
@@ -39,7 +39,7 @@ class AddMovementsRobot extends Controller
     {
         $data = $this->addCommandsForRobotService->addHeadTiltMoviment($request->all());
         if ($data['status']) {
-            return response()->json($data['message'], 200);
+            return response()->json([$data['message'], $data['data']], 201);
         } else {
             return response()->json($data['message'], 400);
         }
@@ -49,7 +49,7 @@ class AddMovementsRobot extends Controller
     {
         $data = $this->addCommandsForRobotService->addHeadRotationMoviment($request->all());
         if ($data['status']) {
-            return response()->json($data['message'], 200);
+            return response()->json([$data['message'], $data['data']], 201);
         } else {
             return response()->json($data['message'], 400);
         }

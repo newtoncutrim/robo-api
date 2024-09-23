@@ -72,7 +72,7 @@ class RoboService
         }
 
         if (!$hasError) {
-            return  StatusMessage::successMessage();
+            return  StatusMessage::successMessage('Robô movido com sucesso');
         } else {
             return StatusMessage::errorMessage('Ocorreu um erro ao mover o robô, ' . ' ' . $error['message']);
         }
@@ -86,7 +86,7 @@ class RoboService
 
         if ($check['status']) {
             $this->repository->update('left_elbow_id', $value, $robot->id);
-            return StatusMessage::successMessage();
+            return StatusMessage::successMessage('Robô movido com sucesso');
         } else {
             return $check;
         }
@@ -100,7 +100,7 @@ class RoboService
 
         if ($check['status']) {
             $this->repository->update('right_elbow_id', $value, $robot->id);
-            return StatusMessage::successMessage();
+            return StatusMessage::successMessage('Robô movido com sucesso');
         } else {
             return $check;
         }
@@ -118,7 +118,7 @@ class RoboService
 
         if ($check['status']) {
             $this->repository->update('left_wrist_id', $value, $robot->id);
-            return StatusMessage::successMessage();
+            return StatusMessage::successMessage('Robô movido com sucesso');
         } else {
             return $check;
         }
@@ -136,7 +136,7 @@ class RoboService
 
         if ($check['status']) {
             $this->repository->update('right_wrist_id', $value, $robot->id);
-            return StatusMessage::successMessage();
+            return StatusMessage::successMessage('Robô movido com sucesso');
         } else {
             return $check;
         }
@@ -150,7 +150,7 @@ class RoboService
 
         if ($check['status']) {
             $this->repository->update('head_tilt_id', $value, $robot->id);
-            return StatusMessage::successMessage();
+            return StatusMessage::successMessage('Robô movido com sucesso');
         } else {
             return $check;
         }
@@ -169,7 +169,7 @@ class RoboService
 
         if ($check['status']) {
             $this->repository->update('head_rotation_id', $value, $robot->id);
-            return StatusMessage::successMessage();
+            return StatusMessage::successMessage('Robô movido com sucesso');
         } else {
             return $check;
         }

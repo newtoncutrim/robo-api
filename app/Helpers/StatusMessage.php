@@ -9,8 +9,8 @@ class StatusMessage
         return ['status' => false, 'message' => $message];
     }
 
-    public static function successMessage($data = '')
+    public static function successMessage($message, $data = '')
     {
-        return ['status' => true, 'message' => 'Robô movido com sucesso', 'data' => $data];
+        return ['status' => true, 'message' => $message, 'data' => $data];
     }
 }

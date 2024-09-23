@@ -36,7 +36,7 @@ class AddMovementsForRobot
             StatusMessage::errorMessage('Não foi possível adicionar o movimento');
         }
 
-        return StatusMessage::successMessage($data);
+        return StatusMessage::successMessage('Movimento adicionado com sucesso', $data);
 
     }
 
@@ -48,7 +48,7 @@ class AddMovementsForRobot
             StatusMessage::errorMessage('Não foi possível adicionar o movimento');
         }
 
-        return StatusMessage::successMessage($data);
+        return StatusMessage::successMessage('Movimento adicionado com sucesso', $data);
     }
 
     public function addWristMoviment(array $data)
@@ -59,7 +59,7 @@ class AddMovementsForRobot
             StatusMessage::errorMessage('Não foi possível adicionar o movimento');
         }
 
-        return StatusMessage::successMessage($data);
+        return StatusMessage::successMessage('Movimento adicionado com sucesso', $data);
     }
 
     public function addArmMoviment(array $data)
@@ -70,6 +70,6 @@ class AddMovementsForRobot
             StatusMessage::errorMessage('Não foi possível adicionar o movimento');
         }
 
-        return StatusMessage::successMessage($data);
+        return StatusMessage::successMessage('Movimento adicionado com sucesso', $data);
     }
 }
