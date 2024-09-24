@@ -33,6 +33,8 @@
                         <option selected value="3">Em Repouso</option>
                         <option value="4">Rotação para 45º</option>
                         <option value="5">Rotação para 90º</option>
+                        <option value="6">Rotação para 135º</option>
+                        <option value="7">Rotação para 180º</option>
                     </select>
                 </div>
             </div>
@@ -56,6 +58,8 @@
                         <option selected value="3">Em Repouso</option>
                         <option value="4">Rotação para 45º</option>
                         <option value="5">Rotação para 90º</option>
+                        <option value="6">Rotação para 135º</option>
+                        <option value="7">Rotação para 180º</option>
                     </select>
                 </div>
             </div>
