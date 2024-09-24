@@ -111,7 +111,7 @@ class RoboService
         $current = $robot->left_wrist_id;
 
         if ($robot->leftElbowMovement->description != 'Fortemente Contraído') {
-            return StatusMessage::errorMessage('O cotovelo esquerdo deve estar contraído para mover o pulso esquerdo');
+            return StatusMessage::errorMessage('O cotovelo esquerdo deve estar Fortemente contraído para mover o pulso esquerdo');
         }
 
         $check = $this->checkMovement($current, $value, 'Pulso esquerdo');
@@ -129,7 +129,7 @@ class RoboService
         $current = $robot->right_wrist_id;
 
         if ($robot->rightElbowMovement->description != 'Fortemente Contraído') {
-            return StatusMessage::errorMessage('O cotovelo direito deve estar contraído para mover o pulso direito');
+            return StatusMessage::errorMessage('O cotovelo direito deve estar  Fortemente contraído para mover o pulso direito');
         }
 
         $check = $this->checkMovement($current, $value, 'Pulso direito');

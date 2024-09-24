@@ -158,6 +158,7 @@
                 payload.head_tilt_id = parseInt(headTilt);
             }
 
+            console.log(payload);
             try {
                 // Faz a requisição para a API
                 let response = await fetch(`api/move-robot/1`, {

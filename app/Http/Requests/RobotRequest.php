@@ -26,7 +26,7 @@ class RobotRequest extends FormRequest
             'right_elbow_id' => ['nullable', 'integer', 'between:0,4'],
             'left_wrist_id' => ['nullable', 'integer', 'between:0,7'],
             'right_wrist_id' => ['nullable', 'integer', 'between:0,7'],
-            'head_rotation_id' => ['nullable', 'integer', 'between:0,4'],
+            'head_rotation_id' => ['nullable', 'integer', 'between:0,5'],
             'head_tilt_id' => ['nullable', 'integer', 'between:1,3'],
         ];
     }
@@ -52,7 +52,7 @@ class RobotRequest extends FormRequest
 
             'head_rotation_id.required' => 'O campo "Rotação da Cabeça" é obrigatório.',
             'head_rotation_id.integer' => 'O campo "Rotação da Cabeça" deve ser um número inteiro.',
-            'head_rotation_id.between' => 'O valor do campo "Rotação da Cabeça" deve estar entre 0 e 4.',
+            'head_rotation_id.between' => 'O valor do campo "Rotação da Cabeça" deve estar entre 0 e 5.',
 
             'head_tilt_id.required' => 'O campo "Inclinação da Cabeça" é obrigatório.',
             'head_tilt_id.integer' => 'O campo "Inclinação da Cabeça" deve ser um número inteiro.',
