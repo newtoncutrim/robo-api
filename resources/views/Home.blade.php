@@ -140,7 +140,6 @@
             leftWrist = document.getElementById('left_wrist').disabled ? "3" : leftWrist;
             rightWrist = document.getElementById('right_wrist').disabled ? "3" : rightWrist;
 
-            // Monta o payload
             const payload = {};
 
             if (!document.getElementById('left_wrist').disabled) {
@@ -164,7 +163,6 @@
 
             console.log(payload);
             try {
-                // Faz a requisição para a API
                 let response = await fetch(`api/move-robot/1`, {
                     method: 'POST',
                     headers: {
@@ -174,7 +172,6 @@
                     body: JSON.stringify(payload)
                 });
 
-                // Verifica a resposta
                 if (response.ok) {
                     let data = await response.json();
                     window.location.reload();
